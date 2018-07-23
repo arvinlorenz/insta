@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 				// if(webprofile.data.user.public_email){
 				// 	array_mails.push(webprofile.data.user.public_email);
 				// }
-				console.log(webprofile.data);
+				res.send(webprofile.data);
 			}).catch((e)=>console.log(e));
 
 });
