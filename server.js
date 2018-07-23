@@ -27,7 +27,16 @@ app.get('/', (req, res) => {
 		// });
 		
 	//});
-	res.send('hello');
+	axios.get(`https://i.instagram.com/api/v1/users/30391702/info/?access_token=3622724116.9c63a16.3d280314a9b94d00aa27a64428016e05`).then((webprofile)=>{
+				// var search_in = webprofile.data.innerHTML;
+				// string_context = webprofile.data.toString();
+
+				// array_mails = webprofile.data.user.biography.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+				// if(webprofile.data.user.public_email){
+				// 	array_mails.push(webprofile.data.user.public_email);
+				// }
+				console.log(webprofile.data);
+			}).catch((e)=>console.log(e));
 
 });
 
